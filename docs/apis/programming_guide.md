@@ -1708,6 +1708,9 @@ Generic:
 
 **Examples**
 
+<div class="codetabs" markdown="1">
+<div data-lang="java" markdown="1">
+
 {% highlight java %}
 ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
@@ -1780,6 +1783,9 @@ Flink offers a number of configuration options for CSV parsing:
 
 For file-based inputs, when the input path is a directory, nested files are not enumerated by default. Instead, only the files inside the base directory are read, while nested files are ignored. Recursive enumeration of nested files can be enabled through the `recursive.file.enumeration` configuration parameter, like in the following example.
 
+<div class="codetabs" markdown="1">
+<div data-lang="java" markdown="1">
+
 {% highlight java %}
 // enable recursive enumeration of nested input files
 ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
@@ -1841,6 +1847,9 @@ Generic:
 
 **Examples**
 
+</div>
+<div data-lang="scala" markdown="1">
+
 {% highlight scala %}
 val env  = ExecutionEnvironment.getExecutionEnvironment
 
@@ -1900,6 +1909,9 @@ Flink offers a number of configuration options for CSV parsing:
 #### Recursive Traversal of the Input Path Directory
 
 For file-based inputs, when the input path is a directory, nested files are not enumerated by default. Instead, only the files inside the base directory are read, while nested files are ignored. Recursive enumeration of nested files can be enabled through the `recursive.file.enumeration` configuration parameter, like in the following example.
+
+</div>
+<div data-lang="scala" markdown="1">
 
 {% highlight scala %}
 // enable recursive enumeration of nested input files
@@ -2049,6 +2061,9 @@ same time run additional transformations on them.
 
 Standard data sink methods:
 
+<div class="codetabs" markdown="1">
+<div data-lang="java" markdown="1">
+
 {% highlight java %}
 // text data 
 DataSet<String> textData = // [...]
@@ -2099,6 +2114,9 @@ myResult.output(
 The output of a data sink can be locally sorted on specified fields in specified orders using [tuple field positions](#define-keys-for-tuples) or [field expressions](#define-keys-using-field-expressions). This works for every output format.
 
 The following examples show how to use this feature:
+
+<div class="codetabs" markdown="1">
+<div data-lang="java" markdown="1">
 
 {% highlight java %}
 
@@ -2151,6 +2169,9 @@ same time run additional transformations on them.
 
 Standard data sink methods:
 
+</div>
+<div data-lang="scala" markdown="1">
+
 {% highlight scala %}
 // text data 
 val textData: DataSet[String] = // [...]
@@ -2182,6 +2203,9 @@ values map { tuple => tuple._1 + " - " + tuple._2 }
 The output of a data sink can be locally sorted on specified fields in specified orders using [tuple field positions](#define-keys-for-tuples) or [field expressions](#define-keys-using-field-expressions). This works for every output format.
 
 The following examples show how to use this feature:
+
+</div>
+<div data-lang="scala" markdown="1">
 
 {% highlight scala %}
 
@@ -2349,6 +2373,9 @@ points, which fall into the unit circle. In each iteration, a random point is pi
 lies inside the unit circle, we increment the count. Pi is then estimated as the resulting count
 divided by the number of iterations multiplied by 4.
 
+<div class="codetabs" markdown="1">
+<div data-lang="java" markdown="1">
+
 {% highlight java %}
 final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
@@ -2405,6 +2432,9 @@ via the methods `iteration.getWorkset()` and `iteration.getSolutionSet()`.
 
 Below is an example for the syntax of a delta iteration
 
+<div class="codetabs" markdown="1">
+<div data-lang="java" markdown="1">
+
 {% highlight java %}
 // read the initial data sets
 DataSet<Tuple2<Long, Double>> initialSolutionSet = // [...]
@@ -2451,6 +2481,9 @@ The following example iteratively estimates the number Pi. The goal is to count 
 points, which fall into the unit circle. In each iteration, a random point is picked. If this point
 lies inside the unit circle, we increment the count. Pi is then estimated as the resulting count
 divided by the number of iterations multiplied by 4.
+
+</div>
+<div data-lang="scala" markdown="1">
 
 {% highlight scala %}
 val env = ExecutionEnvironment.getExecutionEnvironment()
